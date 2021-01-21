@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Ville{% endblock %}
+
+{% block body %}
+    <h1>Create new Ville</h1>
+
+    {{ include('ville/_form.html.twig') }}
+
+    <a href="{{ path('admin_ville_index') }}">back to list</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var fichierRecto = document.querySelector('#ville_image')
+            var labelRecto = fichierRecto.nextElementSibling
+            fichierRecto.addEventListener('change', function (e) {
+                const fileName = fichierRecto.value;
+                labelRecto.innerHTML = fileName;
+            })
+        });
+    </script>
+{% endblock %}

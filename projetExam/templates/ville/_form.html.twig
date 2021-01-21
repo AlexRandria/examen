@@ -1,0 +1,30 @@
+{{ form_start(form) }}
+
+    {{ form_row(form._token) }}
+
+    {{ form_label(form.name,'Nom de la ville') }}
+    {{ form_widget(form.name,{'attr':{'maxlength':'50'}}) }}
+
+    {{ form_label(form.codePostal,'Code postal') }}
+    {{ form_widget(form.codePostal,{'attr':{'maxlength':'5'}}) }}
+
+    {{ form_label(form.slug,'slug') }}
+    {{ form_widget(form.slug) }}
+
+    <div>
+        {{ form_label(form.population,'') }}
+        {{ form_widget(form.population) }}
+    </div>
+
+    {{ form_label(form.image,'') }}
+    {{ form_widget(form.image,{'attr':{'maxlength':'255'}}) }}
+
+    <div>
+        {{ form_label(form.Departement,'Departement') }}
+        {{ form_widget(form.Departement)}}
+    </div>
+
+    {{ form_label(form.save, 'Ajouter ville') }}
+    {{ form_widget(form.save) }}
+
+{{ form_end(form, {'render_rest': false}) }}

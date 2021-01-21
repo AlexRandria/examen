@@ -1,0 +1,16 @@
+
+###> symfony/framework-bundle ###
+/projetExam/.env.local
+/projetExam/.env.local.php
+/projetExam/.env.*.local
+/projetExam/config/secrets/prod/prod.decrypt.private.php
+/projetExam/public/bundles/
+/projetExam/var/
+/projetExam/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+/projetExam.phpunit
+/projetExam.phpunit.result.cache
+/projetExam/phpunit.xml
+###< symfony/phpunit-bridge ###

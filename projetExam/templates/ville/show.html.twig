@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ville{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td><img class="rounded mx-auto d-block" src="/img/{{ville.image}}" alt="Dét" width="700"></td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ ville.name }}</td>
+            </tr>
+            <tr>
+                <th>CodePostal</th>
+                <td>{{ ville.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Population</th>
+                <td>{{ ville.population }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ ville.slug }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-outline-secondary my-2 my-sm-0" href="{{ path('home') }}">Retourner au menu</a>
+
+    <a class="btn btn-outline-secondary my-2 my-sm-0" href="{{ path('admin_ville_edit', {'id': ville.id}) }}">Editer</a>
+
+    {{ include('ville/_delete_form.html.twig') }}
+{% endblock %}
